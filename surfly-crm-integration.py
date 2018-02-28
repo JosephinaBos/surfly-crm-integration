@@ -18,6 +18,7 @@ def index():
 
 def join():
     # get the active session list
+    sessionid = request.form['sessionid']
     request = Request('https://surfly.com/v2/sessions/?api_key=6dbf75022a294e9c9cb247bb142d9e76&active_session=true', headers=headers)
     response_body = urlopen(request).read()
     # this returns a json object, so you need to parse it before you can use the data inside
