@@ -28,7 +28,8 @@ def join():
     # if PIN that was filled in by agent equals a PIN from the active session list
         if key == sessionid:
     # here you grab the follower link from the json file and make sure that the users are redirected to it
-            return redirect(active_sessions["viewer_link"])
+            follower = active_sessions["viewer_link"]
+    return redirect(follower)
 
     # this:
 
